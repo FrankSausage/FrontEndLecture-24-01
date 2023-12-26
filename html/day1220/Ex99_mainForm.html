@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#">
+    <fieldset><legend>로그인 정보</legend>
+        <ol>
+            <li>
+                <script>
+                    var urlParam = new URL(location.href).searchParams;
+                    document.write("아이디 "+urlParam.get('Id_null'));
+                </script>
+            </li>
+            <li>
+                비밀번호 
+                <input type="password" id="password1"> 
+            </li>
+            <li>
+                비밀번호 확인 
+                <input type="password" id="password1_true"> 
+            </li>
+            <li>
+                <script>
+                    var urlParam = new URL(location.href).searchParams;
+                        document.write("회원 등급 "+urlParam.get('default_rank'));
+                </script> 
+            </li>
+        </ol>
+    </fieldset>
+
+    <fieldset><legend>개인 정보</legend>
+        <ol>
+            <li>
+                이름 
+                <input type="text" placeholder="5자미만 공백없이" pattern="[ㄱ-힣]+" maxlength="5" required> 
+            </li>
+            <li>
+                메일 주소 
+                <input type="email" placeholder="abcd@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
+            </li>
+            <li>
+                연락처 
+                <input type="text" pattern="(010)-\d{3,4}-\d{4}" title="형식 010-0000-0000" required>
+            </li>
+            <li>
+                생일 
+                <input type="date">
+            </li>
+        </ol>
+    </fieldset>
+
+    <fieldset><legend>코딩 숙련도(상,중,하)</legend>
+        <ol>
+            <li>
+            <input type="range" min="0" max="100" list="tickmarks">
+                <datalist id="tickmarks">
+                    <option value="10"></option>
+                    <option value="50"></option>
+                    <option value="90"></option>
+                </datalist>
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <input type="submit"  value="제출" >
+    </fieldset>
+</form>
+</body>
+</html>
