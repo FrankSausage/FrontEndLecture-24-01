@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_shop</title>
+    <style>
+        #shop-body_border{
+            /* border: 1px solid black; */
+            margin: auto;
+            width: 1000px;
+            height: 800px;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+            #shop-main_Menu{
+                border: 1px dotted black;
+                border-radius: 10px;
+                margin: 20px;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+                header#header_Menu{
+                    background-color: lemonchiffon;
+                    border-radius: 10px;
+                    padding: 40px;
+                    margin-bottom: 30px;
+                }
+                header#header_Menu h1{
+                    position: relative;
+                    left: 50px;
+                    bottom: 10px;
+                    margin: 0px;
+                    letter-spacing: 10px;
+                }
+
+                main#main_Menu{
+                    width: 700px;
+                
+                }
+                #main_Menu_List{
+                    padding: 0px 10px;
+                }
+
+                    #main_Menu_List li{
+                        list-style: none;
+                        display: inline-block;
+                        margin: 30px;                        
+                    }
+
+            #shop-main_Order{
+                margin: 20px;
+            }
+    </style>
+</head>
+<body>
+    <div id="shop-body_border">
+        <div id="shop-main_Menu">
+            <header id="header_Menu">
+                <h1>MENU</h1>
+            </header>
+
+            <main id="main_Menu">
+                <ul id="main_Menu_List">
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        에스프레소 1000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        아메리카노 2000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        카페라떼 3000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <br>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        카푸치노 2000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        돌체라떼 1000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        카페모카 1500원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <br>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        자바칩 프라프치노 2000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        차이 티 1000원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    <li>
+                        <img src="img/1.jpg"><br>
+                        그린 티 1500원<br>
+                        <select>
+                            <option>0</option>
+                        </select>
+                    </li>
+                </ul>
+            </main>
+        </div>
+
+        <div id="shop-main_Order">
+            <header id="header_Order">
+                <h1>주문내역</h1>
+            </header>
+
+            <main id="main_Order">
+                <div id="main_Order_Menu">
+                    총합 : <input type="text"> 원
+                    <br>
+                    <button type="button">주문하기</button>
+                </div>
+
+                <div id="main_Order_List">
+                    <table id="main_Order_List_Table">
+                        <td>
+                            <tr>목록</tr>
+                            <tr>갯수</tr>
+                            <tr>삭제</tr>
+                        </td>
+                        <br>
+                        <td>
+                            <tr>에스프레소</tr>
+                            <tr class="Order_amount">1</tr>
+                            <tr><button type="button">삭제</button></tr>
+                        </td>
+                        <br>
+                        <td>
+                            <tr>아메리카노</tr>
+                            <tr class="Order_amount">2</tr>
+                            <tr><button type="button">삭제</button></tr>
+                        </td>
+                        <br>
+                        <td>
+                            <tr>카페라떼</tr>
+                            <tr class="Order_amount">1</tr>
+                            <tr><button type="button">삭제</button></tr>
+                        </td>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
