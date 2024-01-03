@@ -17,8 +17,8 @@
 시간을 나타낼 때, 불필요한 0은 사용하지 않는다. */
 
 
-// let H = Math.ceil(Math.random() * 24); let M = Math.ceil(Math.random() * 60);
-let H = 0; let M = 45;
+let H = Math.floor(Math.random() * 24); let M = Math.floor(Math.random() * 60);
+// let H = 23; let M = 59;
 
 console.log(H + " " + M );
 
