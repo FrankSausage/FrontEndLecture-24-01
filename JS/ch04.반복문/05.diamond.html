@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.diamond</title>
+    <script>
+        function drawDiamond(){
+            let N = Number(document.getElementById('num').value);
+            let diamond = '';
+            for (let i = 0; i < N; i++){
+                let star ='';
+
+                for (let x = 0; x <= N-i; x++){
+                    star += '&nbsp';
+                }
+                
+                for (let y = 0; y <= (i*2); y++){
+                    star += '*';
+                }
+                // document.write(star + '<br>');
+                diamond += star + '<br>';
+            }
+
+            for (let i = N+1; i > 0; i--){
+                let star ='';
+
+                for (let x = i; x <= N+1; x++){
+                    star += '&nbsp';
+                }
+                for (let y = 0; y <= ((i-1)*2); y++){
+                    star += '*';
+                }
+                // document.write(star + '<br>');
+                diamond += star + '<br>';
+            }
+            let resultTag = document.getElementById('result');
+            resultTag.innerHTML = diamond;
+        }
+    </script>
+</head>
+<body>
+    <h3>다이아몬드 그리기</h3>
+    <hr>
+    <input type="text" id="num" placeholder="양의 홀수를 입력하세요">
+    <button onclick="drawDiamond()">확인</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

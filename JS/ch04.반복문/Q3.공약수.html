@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3.공약수</title>
+    <script>
+        function submit(){
+            let N1 = Number(document.getElementById('num1').value);
+            let N2 = Number(document.getElementById('num2').value);
+            let Div = '';
+                for (let i = 1; i < Math.min(N1, N2); i++){
+                    if(N1 % i == 0  && N2 % i == 0){
+                        Div += i + '<br>';
+                    }
+                }
+            let resultTag = document.getElementById('result');
+            resultTag.innerHTML = Div;
+        }
+    </script>
+</head>
+<body>
+    <h3>입력받은 두 수의 공약수 구하기</h3>
+    <input type="text" id ="num1" placeholder="값을 입력하세요">
+    <br>
+    <input type="text" id ="num2" placeholder="값을 입력하세요">
+    <br>
+    <button onclick="submit()">제출</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>
