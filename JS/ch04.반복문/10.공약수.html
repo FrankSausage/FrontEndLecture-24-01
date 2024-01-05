@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q3.공약수</title>
+    <title>10.공약수</title>
     <script>
         function submit(){
-            let N1 = Number(document.getElementById('num1').value);
-            let N2 = Number(document.getElementById('num2').value);
-            let Div = '';
-                for (let i = 1; i < Math.min(N1, N2); i++){
-                    if(N1 % i == 0  && N2 % i == 0){
-                        Div += i + '<br>';
-                    }
+            let n1 = Number(document.getElementById('num1').value);
+            let n2 = Number(document.getElementById('num2').value);
+            let div = [];
+            
+            for (let i = 1; i < Math.min(n1, n2); i++){
+                if(n1 % i == 0  && n2 % i == 0){
+                    div.push(i);
                 }
+            }
             let resultTag = document.getElementById('result');
-            resultTag.innerHTML = Div;
+            resultTag.innerHTML = div;
         }
     </script>
 </head>
