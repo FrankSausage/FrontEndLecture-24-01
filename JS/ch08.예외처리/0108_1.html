@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 만 나이 계산하기
+
+    function getAge(){
+        let gYear = Number(document.getElementById("year").value);
+        let gMonth = Number(document.getElementById("month").value);
+        let gDay = Number(document.getElementById("day").value);
+        const day = new Date();
+        const today = day.getDate();
+        const thisMonth = day.getMonth()+1;
+        const thisYear = day.getFullYear();
+        
+        let age = 0;
+        console.log(age, gYear, gMonth, gDay, today, thisMonth, thisYear);
+        
+        if(thisMonth == gMonth || thisMonth < gMonth){
+            if(today < gDay){
+                age = thisYear - (gYear - 1);
+            }
+            age = thisYear - gYear;
+        } 
+        console.log(age);
+        let resTag = document.getElementById('result');
+        resTag.innerHTML = `<h4>나이 : ${age}</h4>`
+    }
+    </script>
+</head>
+<body>
+    <input type="text" id="year" placeholder="출생 년도">
+    <input type="text" id="month" placeholder="출생 월">
+    <input type="text" id="day" placeholder="출생 일">
+    <button onclick="getAge()">계산</button>
+    <div id="result"></div>
+</body>
+</html>

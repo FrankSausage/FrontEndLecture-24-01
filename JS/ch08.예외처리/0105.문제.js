@@ -42,7 +42,7 @@ function isDivisible (year){
 
 while(y <= 2040){
     console.log(isDivisible(y));
-    y++
+    y++ 
 }
 console.log();
 console.log("3번")
