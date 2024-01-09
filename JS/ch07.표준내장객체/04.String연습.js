@@ -9,7 +9,7 @@
 // console.log(numString.replace(/[^1]/g, '').length);
 
 // for (let i= 0; i<=9; i++){
-//     let pattern = new RegExp('[^'+i+']', 'g');
+//     let pattern = new RegExp('[^' + i + ']', 'g');
 //     console.log(pattern);
 //     count = numString.replace(pattern, '').length;
 //     console.log(`${i}: ${count}`);
@@ -26,34 +26,41 @@
 // 2. 디지털 시계, 00:00 ~ 23:59
 // 하루동안 3이 표시되는 시간은 몇초인가?
 function digitalClock(){
-    let timeSum = 0;
-    for (let i = 0; i <= 23; i++){
-        for(let y = 0; y <=59; y++){
-            if(Math.floor(i / 10) == 3 || i % 10 == 3 || Math.floor(y / 10) == 3 || y % 10 == 3){
-                timeSum += 60;
+    // let timeSum = 0;
+    // for (let i = 0; i <= 23; i++){
+    //     for(let y = 0; y <=59; y++){
+    //         if(Math.floor(i / 10) == 3 || i % 10 == 3 || Math.floor(y / 10) == 3 || y % 10 == 3){
+    //             timeSum += 60;
+    //         }
+    //     }
+    // }
+    // return timeSum;
+    let displayTime = 0;
+    for (let h = 0; h <= 23; h++){
+        for(let m = 0; m <= 59; m++){
+            let clock = h + ':' + m;
+            if(clock.indexOf('3') >= 0){
+                displayTime += 60;
             }
         }
     }
-    return timeSum;
+    return displayTime;
 }
-console.log(digitalClock());
+console.log(`${digitalClock()}`);
 
 //3. 두개의 세자리수를 곱해서 나온 결과가 palindrome일 때
 // 가장 큰 plaindrome 수와 어떤 수를 곱해서 나온 결과인가?
 function isPalindrome(num1, num2){
     let value = num1*num2
-    let reversStr = value.toString().split('').reverse().join('');
-    return value == reversStr;
+    return value == value.toString().split('').reverse().join('');
 }
 
 function resultPalindrom(){
-    let palSum = 100;
-    let palNum1 = 100;
-    let palNum2 = 100;
+    let palSum = 0; let palNum1 = 0; let palNum2 = 0;
     
     for(let i = 100; i <= 999; i++){
         for(let y = 100; y <= 999; y++){
-            if(isPalindrome(i,y) == true && (i*y) >= palSum){
+            if(isPalindrome(i,y) && (i*y) >= palSum){
                 palSum = i*y; palNum1 = i; palNum2 = y;
             }
         }
@@ -65,6 +72,9 @@ resultPalindrom();
 // 4. C:/Users/human-18/Desktop/WebProject/JS/ch07.표준내장객체/04.String연습.js
 // 에서 파일명(04.String연습.js)만 출력하세요.
 let locationText = 'C:/Users/human-18/Desktop/WebProject/JS/ch07.표준내장객체/04.String연습.js';
-console.log(locationText.split("체/").pop());
+console.log(locationText.split("/").pop());
 console.log(locationText.substring(locationText.length-14, locationText.length));
-
+// let pathArr = locationText.split('/');
+// console.log(pathArr[pathArr.length - 1]);
+// let fileIndex = path.lastIndexOf('/');
+// console.log(locationText.substring(fileIndex + 1));
