@@ -41,7 +41,7 @@
                     }
                 }
             }
-            $('<div></div>').html(resultStr).appendTo('#result1');
+            $('#result1').html(resultStr);
         }
         function q2(){
         /*
@@ -62,7 +62,7 @@
                 if (word == search)
                 count ++;
             }
-            $('<div></div>').html(`${search}의 갯수: ${count}`).appendTo('#result2');
+            $('#result2').html(`${search}의 갯수: ${count}`);
         }
         function q3(){
             let price = $('#price').val();
@@ -79,7 +79,7 @@
             for (let element of newPrices){
                 resultStr += element + '<br>';
             }
-            $('<div></div>').html(resultStr).appendTo('#result3');
+            $('#result3').html(resultStr);
         }
         
         function q4(){
