@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>23.회원가입</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+   <style>
+      * { font-family: 'Noto Sans KR', sans-serif; }
+      a { text-decoration: none; }
+   </style>     
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand ms-4" href="#">Logo</a>
+      <a class="navbar-link" href="#"><img src="https://picsum.photos/1080/50?q=3"></a>
+    <div class="container-fluid mt-3"></div>
+  </nav>
+    
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-5 p-4">
+        <form action="/user/register" method="post" enctype="multipart/form-data">
+          <div class="card mt-5">
+            <div class="card-body">
+              <p class="fw-bold fs-4 p-1 text-center border-bottom border-2 border-danger"><strong>회원가입</strong></p>
+                <table class="table table-borderless">
+                  <tr>
+                    <td class="align-middle" style="width:30%;">사용자 ID</td>
+                    <td><input type="text" name="uid" class="form-control" placeholder="ID를 입력하세요"></td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">패스워드</td>
+                    <td><input type="password" name="upwd" class="form-control" placeholder="패스워드를 입력하세요"></td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">패스워드 확인</td>
+                    <td><input type="password" name="pwdchack" class="form-control" placeholder="패스워드를 입력하세요"></td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">사용자 이름</td>
+                    <td><input type="text" name="uname" class="form-control" placeholder="이름을 입력하세요"></td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">이메일</td>
+                    <td><input type="text" name="email" class="form-control" placeholder="이메일을 입력하세요" name="email"></td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">성별</td>
+                    <td class="text-center justify-content-between"> 
+                      <input type="radio" class="form-check-input" id="radio1" name="radiomale" value="male" checked>
+                      <label class="form-check-label" for="radio1">남</label>
+                      <input type="radio" class="form-check-input ms-5" id="radio2" name="radiofemale" value="female">
+                      <label class="form-check-label" for="radio1">여</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">프로필 사진</td>
+                    <td><input class="form-control" name="profile" type="file"></td>
+                  </tr>
+                </table>
+                <div class="col text-center">
+                  <button type="submit" class="btn btn-primary col-2 mx-2">제출</button>
+                  <button type="reset" class="btn btn-secondary col-2 mx-2">취소</button>
+                </div>
+                  <p class="text-center mt-3">
+                    <span>이미 사용자 계정이 있으신가요?</span>
+                    <a href="#" class="ms-1">로그인</a>
+                  </p>
+                  <div class="text-center">
+                    <a href="#"><img src="img/sns-naver.svg"></a>
+                    <a href="#"><img src="img/sns-facebook.svg"></a>
+                    <a href="#"><img src="img/sns-kakao.svg"></a>
+                    <a href="#"><img src="img/sns-phone.svg"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-sm bg-light navbar-dark fixed-bottom">
+    <div class="container-fluid justify-content-center">
+      Copylight &copy; 2024 FrankSausage, All rights reserved.
+    </div>
+  </nav>
+</body>
+</html>
